@@ -1,0 +1,31 @@
+Runtime = Number of cycles for 1 full run of fsm 	(W = AxB+Z+E)
+Runtime = DSI + PE_PIPE + PE_ACCUM       + DSO  + ERR + SAVE
+Runtime = N   + C       + NUM_A_SECTIONS + R    + 1	+ 1
+Runtime = N   + C       + (N^2)/(RxC)    + R    + 1	+ 1
+
+Latency = Number of cycles for matrix multiplication	(C = AxB)
+Latency = PE_PIPE + PE_ACCUM
+Latency = C 	+ NUM_A_SECTIONS
+Latency = C       + (N^2)/(RxC) 
+
+N=256, R=32,  C=4		ALM=2512.0		Runtime=806		Latency=516
+
+N=256, R=64,  C=4		ALM=3287.0		Runtime=582		Latency=260
+N=256, R=32,  C=8		ALM=3112.5		Runtime=554		Latency=264
+N=256, R=16,  C=16	ALM=3313.5		Runtime=546		Latency=272
+N=256, R=8,   C=32	ALM=4086.5		Runtime=554		Latency=288
+N=256, R=4,   C=64	ALM=8833.5		Runtime=582		Latency=320
+
+N=512, R=128, C=4		ALM=6486.0		Runtime=1158	Latency=516
+N=512, R=64,  C=8		ALM=6067.0		Runtime=1098	Latency=520
+N=512, R=32,  C=16	ALM=6159.0		Runtime=1074	Latency=528
+N=512, R=16,  C=32	ALM=6932.5		Runtime=1074	Latency=544
+N=512, R=8,   C=64	ALM=11070.0		Runtime=1098	Latency=576
+N=512, R=4,   C=128	ALM=28509.5		Runtime=1158	Latency=640
+
+
+----------------------------------------------------------------------------
+pqc_block_v1
+----------------------------------------------------------------------------
+N=256, R=64,  C=4		ALM=3292.5		Runtime=582		Latency=260
+N=256, R=16,  C=16	ALM=3060.5		Runtime=582		Latency=260
