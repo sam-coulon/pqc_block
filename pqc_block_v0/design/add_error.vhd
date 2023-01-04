@@ -84,4 +84,6 @@ begin
     EN_out <= en_hold when show_ena = '1' else (others=>'0');
     DE_out <= de_hold when show_ena = '1' else '0';
 
+-- test
+
 end rtl;
